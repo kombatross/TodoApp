@@ -1,0 +1,175 @@
+:root{
+    --divider:1px solid black;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Signika Negative', sans-serif;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-repeat: no-repeat;
+    max-height: 1000px;
+    height: 100vh;
+    overflow: hidden;   
+    /* font-family: monospace;  */
+    
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: none; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    background:scroll;
+}
+
+#frame{
+    text-align: center;
+    border: 1.8px solid rgb(128, 128, 128);
+    border-radius: 10px;
+    height: fit-content;
+    width: 420px;
+    max-height: 480px;
+    overflow-y: scroll;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.315));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.521);
+    
+
+
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    width: 9ch;
+    animation: typing 1.5s steps(8), blink .6s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50%{
+        border-color: transparent
+    }
+}
+.divider{
+    border-top: var(--divider);
+    margin-bottom: 9px;
+    
+}
+input{
+    background: rgb(240, 248, 255);
+    width: 325px;
+    height: 24px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    /* color: white; */
+}
+button{
+    background: rgb(240, 248, 255);
+    width: 67px;
+    /* width: 325px; */
+    height: 24px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-left: 2px;
+}
+p{
+    margin: 15px 10px 15px 10px;
+    font-size: 24px;
+    /* background: rgba(191, 196, 202, 0.281);
+    border: 1px solid gray; */
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.315));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 32px;
+    /* color: rgb(245, 231, 231); */
+}
+
+.parag:hover{
+    transition: .3s ease;
+    filter: blur(1px);
+}
+.done{
+    text-decoration: line-through;
+    /* filter: opacity(2px); */
+}
+
+.none{
+    display: none;
+}
+
+.editBtn{
+    content: 'Edit';
+}
+
+.rem{
+    margin-left: 20px;
+}
+
+i{
+    top: -40px;
+    position: relative;
+    opacity: 0%
+}
+
+
+i:hover{
+    opacity: 100%;
+}
+
+.parag:hover + i {
+    transition: .3s;
+    opacity: 100%;
+}
+
+
+.parag:hover + i + i{
+    transition: .3s;
+    opacity: 100%;
+}
+
+
+
+::selection{
+    color: none;
+    background: none;
+}
+::-moz-selection{
+    color: none;
+    background: none;
+}
