@@ -20,8 +20,9 @@ if (valueOfImput!==""){
 
     const newTodo = document.createTextNode(`${valueOfImput}`)
 
-    localStorage.setItem('task',newTodoPar.appendChild(newTodo))
+//     localStorage.setItem('task',newTodoPar.appendChild(newTodo))
 
+    newTodoPar.appendChild(newTodo)
    
     frame.appendChild(newTodoPar)}else {return}
 
@@ -68,7 +69,7 @@ if (valueOfImput!==""){
     
     
 // TO USUWA ZADANIE
-// NIE 1/2 DZIALA !!!
+// DZIALA !!!
 
     rem[rem.length-1].addEventListener('click', function (e) {
         console.log(e);
