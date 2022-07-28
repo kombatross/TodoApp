@@ -122,7 +122,7 @@ p{
 
 .parag:hover{
     transition: .3s ease;
-    filter: blur(1px);
+    filter: blur(3px);
 }
 .done{
     text-decoration: line-through;
