@@ -147,6 +147,9 @@ i{
     opacity: 0%
 }
 
+/* i:hover + .parag{
+    filter: blur(3px);
+} */
 
 i:hover{
     opacity: 100%;

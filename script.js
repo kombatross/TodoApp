@@ -20,9 +20,8 @@ if (valueOfImput!==""){
 
     const newTodo = document.createTextNode(`${valueOfImput}`)
 
-//     localStorage.setItem('task',newTodoPar.appendChild(newTodo))
-
     newTodoPar.appendChild(newTodo)
+
    
     frame.appendChild(newTodoPar)}else {return}
 
@@ -99,7 +98,8 @@ if (valueOfImput!==""){
         let editBtn = document.querySelector('.editBtn')
         editBtn.innerHTML = 'Edit'
         const valueEdit = editInput.value
-        editBtn.addEventListener('click',function(event){
+        
+        function addedit (event){
             const valueEdit = editInput.value
             if (valueEdit !== "") {
               e.target.previousElementSibling.firstChild.textContent = valueEdit
@@ -108,15 +108,28 @@ if (valueOfImput!==""){
             editInput.remove()  
             }else return
             
-        })
+        }
+        editBtn.addEventListener('click',addedit)
+
         
     })
-    
+    // editInput.addEventListener('keyup',enterEdit)
+    //             const enterEdit = e => {
+    //         if (e.key==='Enter') {
+    //             addedit()
+    //         }else return
+    //     }
         
    
 }
 
 submitBtn.addEventListener('click', addTodo)
 
+const enterAdd = e => {
+    if (e.key==='Enter') {
+        addTodo()
+    }else return
+}
 
-localStorage.setItem(key, value);
+
+valueImput.addEventListener('keyup', enterAdd)
