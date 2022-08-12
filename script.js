@@ -1,56 +1,53 @@
-const valueImput = document.querySelector('#new') // POLE WPISYWANIA NOWEGO ZADANIA
+const valueInput = document.querySelector('#taskField') // POLE WPISYWANIA NOWEGO ZADANIA
 const submitBtn = document.querySelector('.add') // PRZYCISK DODAWANIA
-const frame = document.querySelector('#frame') // DIV Z LISTA ZADAN
-const par = document.querySelector('p') // PARAGRAF
-const test = 'test' // TESTOWA ZMNIENNA
-let parX = document.querySelectorAll('.parag') // PARAGRAF Z KLASA 'PARAG'
-
+const frame = document.querySelector('#container') // DIV Z LISTA ZADAN
 
 
 const addTodo = () =>    {
     
     // DODAJE ZADANIE Z KLASA 'PARAG'
     
-    const valueOfImput = valueImput.value 
+    const valueOfInput = valueInput.value 
 
-if (valueOfImput!==""){
+if (valueOfInput!==""){
     const newTodoPar = document.createElement('p')
 
     newTodoPar.classList.add('parag')
 
-    const newTodo = document.createTextNode(`${valueOfImput}`)
+    const newTodo = document.createTextNode(valueOfInput)
 
     newTodoPar.appendChild(newTodo)
 
    
-    frame.appendChild(newTodoPar)}else {return}
+    container.appendChild(newTodoPar)}
+    else {return}
 
 // IKONKA EDITU    
 
-    const icon = document.createElement('i')
+    const editIcon = document.createElement('i')
 
-    icon.classList.add('fa-pen-to-square')
-    icon.classList.add('fa-regular')
-    icon.classList.add('edit')
-    icon.classList.add('icons')
+    editIcon.classList.add('fa-pen-to-square')
+    editIcon.classList.add('fa-regular')
+    editIcon.classList.add('edit')
+    editIcon.classList.add('icons')
     
 // IKONKA REMOVE 
 
-    const iconX = document.createElement('i')
+    const deleteIcon = document.createElement('i')
    
-    iconX.classList.add('fa-trash-can')
-    iconX.classList.add('fa-regular')
-    iconX.classList.add('rem')
-    iconX.classList.add('icons')
+    deleteIcon.classList.add('fa-trash-can')
+    deleteIcon.classList.add('fa-regular')
+    deleteIcon.classList.add('rem')
+    deleteIcon.classList.add('icons')
      
 // DODAJE IKONKE DO ZADANIA    
 
-    frame.appendChild(icon)
-    frame.appendChild(iconX)
+    frame.appendChild(editIcon)
+    frame.appendChild(deleteIcon)
 
 //--------------------------------------------------
     
-    valueImput.value = "" // USTAWIA CZYSTE POLE W IMPUCIE PO DODANIU
+    valueInput.value = "" // USTAWIA CZYSTE POLE W IMPUCIE PO DODANIU
     
     parX = document.querySelectorAll('.parag') // NADPISUJE ZMIENNA Z "PARAG"
  
@@ -125,11 +122,11 @@ if (valueOfImput!==""){
 
 submitBtn.addEventListener('click', addTodo)
 
-const enterAdd = e => {
-    if (e.key==='Enter') {
-        addTodo()
-    }else return
-}
+// const enterAdd = e => {
+//     if (e.key==='Enter') {
+//         addTodo()
+//     }else return
+// }
 
 
-valueImput.addEventListener('keyup', enterAdd)
+// valueImput.addEventListener('keyup', enterAdd)

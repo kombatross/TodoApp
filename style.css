@@ -37,7 +37,7 @@ font-family: 'Signika Negative', sans-serif;
     background:scroll;
 }
 
-#frame{
+#container{
     text-align: center;
     border: 1.8px solid rgb(128, 128, 128);
     border-radius: 10px;
