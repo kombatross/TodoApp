@@ -59,7 +59,7 @@ if (valueOfInput!==""){
 // DZIAŁA !!!
 
     parX[parX.length-1].addEventListener('dblclick', function (e) {
-                 console.log(e);
+        
                  e.target.classList.toggle('done')
     })
     
@@ -68,7 +68,6 @@ if (valueOfInput!==""){
 // DZIALA !!!
 
     rem[rem.length-1].addEventListener('click', function (e) {
-        console.log(e);
         e.target.previousSibling.previousSibling.remove()
         e.target.previousSibling.remove()
         e.target.remove()
